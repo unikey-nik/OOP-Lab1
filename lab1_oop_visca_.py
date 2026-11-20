@@ -1,5 +1,3 @@
-
-
 class Greeter:
     def greet(self):
         print("Hello! Welcome to OOP!")
@@ -9,19 +7,15 @@ person = Greeter()
 person.greet()
 
 
-# ============================================================
-# PART 2 & 3: Classes, Objects, and Methods - Car
-# ============================================================
 
 class Car:
-    wheels = 4  # Class attribute shared by all cars
-
+    wheels = 4 
     def __init__(self, brand, model, year):
         self.brand = brand
         self.model = model
         self.year = year
-        self.km = 0  # Each car starts with 0 kilometers driven
-
+        self.km = 0  
+        
     def drive(self, km):
         if km > 0:
             self.km += km
@@ -36,7 +30,6 @@ class Car:
         return f"{self.brand} {self.model} ({self.year})"
 
 
-# Create three Car objects
 car1 = Car("Toyota", "Vios", 2022)
 car2 = Car("Honda", "Civic", 2023)
 car3 = Car("Mitsubishi", "Mirage", 2021)
@@ -59,10 +52,6 @@ print("Car 2 age:", car2.age(2026), "years old")
 print("Car 3 distance:", car3.km, "km")
 print("Car 3 age:", car3.age(2026), "years old")
 
-
-# ============================================================
-# PART 4: Mini Project - Library Book
-# ============================================================
 
 class Book:
     counter = 0  # Counts how many Book objects have been created
@@ -95,7 +84,6 @@ class Book:
         return f"Book({self.title!r}, {self.author!r})"
 
 
-# Create some Book objects and test the methods
 book1 = Book("Harry Potter", "J.K. Rowling")
 book2 = Book("The Little Prince", "Antoine de Saint-Exupery")
 book3 = Book("Charlotte's Web", "E.B. White")
@@ -109,10 +97,10 @@ print("Total books created:", Book.counter)
 book1.borrow()
 print(book1)
 
-book1.borrow()  # Try borrowing it again
+book1.borrow() 
 book1.return_book()
 print(book1)
 
-book1.return_book()  # Try returning it when it is already available
+book1.return_book()
 
 print("Book object representation:", repr(book2))
